@@ -1,7 +1,7 @@
 import UsuarioModel from "./UsuarioSchema.js";
 
 class usuario{
-    constructor(email,senha,tipo, ativo){
+    constructor(email,senha,nome, ativo){
         this.email = email; 
         this.senha = senha; 
         this.nome=nome; 
@@ -12,7 +12,7 @@ class usuario{
             const novoUsuario = new UsuarioModel({
                 email: this.email, 
                 senha: this.senha, 
-                tipo:this.tipo, 
+                nome:this.nome, 
                 ativo: this.ativo
             });
             return await novoUsuario.save();

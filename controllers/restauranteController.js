@@ -71,7 +71,7 @@ static async createRestaurante(req, res) {
     static async getAllRestaurante(req, res) {
         try {
             const Restaurante = await restaurante.findAll();
-            res.json(restaurante);
+            res.json(Restaurante);
         } catch (error) {
             console.error('Erro ao carregar os restaurante:', error);
             res.status(500).json({message: 'Erro interno ao buscar restaurante'})

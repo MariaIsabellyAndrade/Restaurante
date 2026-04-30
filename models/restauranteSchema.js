@@ -18,7 +18,7 @@ const restauranteSchema = new mongoose.Schema(
             enum: ["JAPONES", "PIZZA","HAMBURGUER", "CHURRASCARIA", "ITALIANO"],
             required: true,
         },
-        cpnj: {
+        cnpj: {
             type: String,
             required: true,
             unique: true,

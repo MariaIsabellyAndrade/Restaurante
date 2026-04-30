@@ -6,15 +6,15 @@ class restaurante{
         this.nome = nome; 
         this.descricao = descricao; 
         this.categoria = categoria; 
-        this.cnpj = this.cnpj;
+        this.cnpj = cnpj;
     }
   
     async save(){
         const novoRestaurante = new RestauranteModel({
         nome: this.nome,
-        email: this.email,
+        descricao: this.descricao,
         categoria: this.categoria, 
-        cpnj: this.cpnj
+        cnpj: this.cnpj
         });
         return await novoRestaurante.save();
     }
